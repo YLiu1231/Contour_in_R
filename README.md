@@ -8,10 +8,12 @@ There are 35 observation points in total, the distribution of them is shown in `
 
 ![example](https://github.com/YLiu1231/Contour_in_R/blob/master/example.png)
 
-She wants to create a Contour plot like `lake.png`.
+She wants to create a Contour plot like `lake.png`. The plot below is created by MIKE21, and is used in one [published paper](http://onlinelibrary.wiley.com/doi/10.1002/clen.201300693/full). If you want to use the plot below, please contact the original writer. 
+Hua Wang (wanghua543543@163.com)
 
 ![lake](https://github.com/YLiu1231/Contour_in_R/blob/master/lake.png)
 
+## Now, I want to draw a contour plot in R, which has similar look as the plot above.
 ## Contour plot in R
 
 As usual, we draw contour plot by `ggplot()+scale_fill_gradientn()+stat_contour()`, they draw base map, fill in colors, draw the target contour plot respectively. But the input data should have all coordinates and corresponding concentration. However, here we just have 35 observations, we should do more work to calculate concentration value for each coordinate.
@@ -39,3 +41,5 @@ then we have the final plot
 
 ![Rplotlake](https://github.com/YLiu1231/Contour_in_R/blob/master/Rplotlake.png)
 
+
+# No copyright is reserved! You can use all codes for free. 
