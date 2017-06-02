@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 # Contour_in_R
 ## Background
 My friend's major is environmental engineering, one of his projects aims to analyze the distribution of concentration of copper in Jinshan Lake, Zhenjiang City, Jiangsu Province, China. His data set is like **concentration_and_coordinates.xlsx**. The shape of Jinshan Lake is shown in **emptylake.png**. 
@@ -22,10 +23,20 @@ At the very first, I try to use linear fitting model, which is easy but time-con
 
 ![fulllake](https://github.com/YLiu1231/Contour_in_R/blob/master/fulllake.png)
 
-This method is naive but easy to realize. The result is hard to distinguish and the patterns are angular.
+This method is naive but easy to realize. The result is hard to distinguish and the patterns are angular(I will not show this ugly result).
 
 ### polynomial fitting
 then I try to use some mathematical method, construct a linear system of equations. 
-\begin{equation}
-\sum_{i=0}^{6}\sum_{j=0}^{4}a_{ij}x_k^iy_k^j=z_k,\quad k=1,2,\cdots,35
-\end{equation}
+$$\sum_{i=0}^{6}\sum_{j=0}^{4}a_{ij}x_k^iy_k^j=z_k,\quad k=1,2,\cdots,35$$
+
+If we can solve this system of equations, we can use the parameter vector to calculate concentration of each coordinate. But the most imortant problem is the boundedness of the polynomial at the edge of this lake. Unfortunately, the assumption is not satisfied.
+the last plot is like **polynomial.pdf**
+
+### overlap fitting 
+calculate the value of one single point by the distance between this point and the target. Suppose now we use the 1st observation. The coordinate of it is (x0,y0), the concentration is z0. So for any point in the plane. We use function
+$$\frac{\text{z0}}{ln(ln(sqrt((x0-vec[2])^2+(y0-vec[1])^2)+e)+e)}$$
+
+then we have the final plot 
+
+![Rplotlake](https://github.com/YLiu1231/Contour_in_R/blob/master/Rplotlake.png)
+
