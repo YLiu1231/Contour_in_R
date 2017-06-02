@@ -1,6 +1,6 @@
 # Contour_in_R
 ## Background
-My friend's major is environmental engineering, one of his projects aims to analyze the distribution of concentration of copper in Jinshan Lake, Zhenjiang City, Jiangsu Province, China. His data set is like `concentration_and_coordinates.xlsx`. The shape of Jinshan Lake is shown in `emptylake.png`. 
+My friend's major is environmental engineering, one of her projects aims to analyze the distribution of concentration of copper in Jinshan Lake, Zhenjiang City, Jiangsu Province, China. Her data set is like `concentration_and_coordinates.xlsx`. The shape of Jinshan Lake is shown in `emptylake.png`. 
 
 ![emptylake](https://github.com/YLiu1231/Contour_in_R/blob/master/emptylake.png)
 
@@ -8,7 +8,7 @@ There are 35 observation points in total, the distribution of them is shown in `
 
 ![example](https://github.com/YLiu1231/Contour_in_R/blob/master/example.png)
 
-He wants to create a Contour plot like `lake.png`.
+She wants to create a Contour plot like `lake.png`.
 
 ![lake](https://github.com/YLiu1231/Contour_in_R/blob/master/lake.png)
 
