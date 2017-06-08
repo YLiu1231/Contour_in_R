@@ -41,5 +41,10 @@ then we have the final plot
 
 ![Rplotlake](https://github.com/YLiu1231/Contour_in_R/blob/master/Rplotlake.png)
 
+## Use matlab to have a try
+
+Actually, all we need to do is interpolation. And I found a function in MATLAB called `griddata`，who uses scattered points to do lagrange interpolation in 2 dimensions. The only pity is that this function will calculate the values of points, which are located in the convex domain built by given coordinates. So, I have to set the value of four corners of rectangle to be 0.
+then we have this plot
+![matlab](https://github.com/YLiu1231/Contour_in_R/blob/master/MATLABlake.png)
 
 # No copyright is reserved! You can use all codes for free. 
